@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazar archivo CSS externo -->
+    <script src="script.js" defer></script> <!-- Enlazar archivo JavaScript externo -->
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="registro.php" method="POST" enctype="multipart/form-data">
+        <table border="0" align="center">
+            <tr>
+                <td>Nombre y Apellido:</td>
+                <td>
+                    <label for="name"></label>
+                    <input type="text" name="nombre" id="name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Cedula:</td>
+                <td>
+                    <label for="cedula"></label>
+                    <input type="number" name="cedula" id="cedula" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Área de Acceso:</td>
+                <td>
+                    <select name="area" id="area" required>
+                        <option value="Cafeteria">Cafetería</option>
+                        <option value="Baños">Baños</option>
+                        <option value="Sala de juntas">Sala de juntas</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hora de Ingreso:</td>
+                <td>
+                    <input type="time" name="hora_ingreso" id="hora_ingreso" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Foto:</td>
+                <td>
+                    <input type="file" name="foto" accept="image/*" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Novedad:</td>
+                <td>
+                    <label for="novedad"></label>
+                    <textarea name="novedad" id="novedad" rows="4" cols="50" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <div class="button-container">
+                        <input type="submit" name="enviar" id="enviar" value="Registrarse" />
+                        <input type="reset" name="borrar" id="borrar" value="Restablecer" />
+                        <button type="button" onclick="window.location.href='mostrar_registros.php'">Mostrar Matriz</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
